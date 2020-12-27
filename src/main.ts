@@ -31,6 +31,6 @@ async function bootstrap() {
   appInternal.useStaticAssets(join(__dirname, '../../', 'bl/dist/browser/'));
   appInternal.enableCors();
   await appInternal.init();
-  http.createServer(serverInternal).listen(4001);
+  http.createServer(serverInternal).listen(5000);
 }
 bootstrap();
