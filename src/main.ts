@@ -23,14 +23,14 @@ async function bootstrap() {
   await app.listen(3020);
 
   // server 2;
-  const serverInternal = express();
-  const appInternal = await NestFactory.create<NestExpressApplication>(
-    AppInternalModule,
-    new ExpressAdapter(serverInternal),
-  );
-  appInternal.useStaticAssets(join(__dirname, '../../', 'bl/dist/browser/'));
-  appInternal.enableCors();
-  await appInternal.init();
-  http.createServer(serverInternal).listen(5000);
+  // const serverInternal = express();
+  // const appInternal = await NestFactory.create<NestExpressApplication>(
+  //   AppInternalModule,
+  //   new ExpressAdapter(serverInternal),
+  // );
+  // appInternal.useStaticAssets(join(__dirname, '../../', 'bl/dist/browser/'));
+  // appInternal.enableCors();
+  // await appInternal.init();
+  // http.createServer(serverInternal).listen(5000);
 }
 bootstrap();
